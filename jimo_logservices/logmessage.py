@@ -74,10 +74,20 @@ class LogMessage(object):
     @property
     def IpAddress(self):
         return self.__IpAddress;
+
+    @IpAddress.setter
+    def IpAddress(self, ipAddress:str)->None:
+        if(type(ipAddress) == str):
+            self.__IpAddress = ipAddress
             
     @property
     def ApplicationName(self):
-        return self.__ApplicationName;
+        return self.__ApplicationName
+
+    @ApplicationName.setter
+    def ApplicationName(self, appName:str):
+        if(type(appName) == str):
+            self.__ApplicationName = appName
 
 
     @property
@@ -116,14 +126,14 @@ class LogMessage(object):
         return status;
 
     def __PaddingText(self, text:str , size:str):
-        value  =  str(text);
-        length  = len(value);
-        paddinglength = size  - length;
+        value   = str(text)
+        length  = len(value)
+        paddinglength = size  - length
+        
         if(paddinglength > 0):
             for i in range(paddinglength):
-                value +=" ";
-        return value;
-        
+                value +=" "
+        return value       
         
 
     def __str__(self)->str:
@@ -134,7 +144,6 @@ class LogMessage(object):
                                                   self.IpAddress,
                                                   self.ApplicationName,
                                                   self.Message );
-
         return result;
 
 
