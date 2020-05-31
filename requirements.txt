@@ -1,0 +1,2 @@
+dispatchers-jimobama @ git+http://192.168.0.12/jimobama/threaddispatcher.git@ad9eeb8a3b7f4bd58b1bc8c4db3c6fd1ee719c5e
+events-jimobama @ git+https://github.com/miljimo/events.git@02e5be98bf50e65fc6c07089238aa16615853fa4
